@@ -28,7 +28,7 @@
     },
     "web": {
       "output": "static",
-      "favicon": "./assets/images/final_quest_240x240.png",
+      "favicon": "./public/favicon-32.png",
       "bundler": "metro"
     },
     "plugins": [
