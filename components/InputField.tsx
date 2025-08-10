@@ -1,5 +1,5 @@
 
-import { View, Text, TextInput, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, TextInput, StyleSheet, TouchableOpacity, Platform } from 'react-native';
 import { colors } from '../styles/commonStyles';
 import { StyleSheet as RNStyleSheet } from 'react-native';
 
@@ -60,7 +60,10 @@ export default function InputField({ label, value, onChange, keyboard = 'default
     </View>
   );
 }
-
+const webNoOutline: any =
+  Platform.OS === 'web'
+    ? { outlineStyle: 'none', outlineWidth: 0, outlineColor: 'transparent' }
+    : {};
 const styles = StyleSheet.create({
   container: {
     marginVertical: 6,
@@ -74,6 +77,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: 8 as any,
+    backgroundColor: 'transparent',
+
   },
   stepperBtn: {
     width: 38,
@@ -111,5 +116,6 @@ const styles = StyleSheet.create({
     flex: 1,
     color: 'white',
     fontWeight: '600',
+    ...webNoOutline,
   },
 });

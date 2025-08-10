@@ -5,7 +5,7 @@ export const colors = {
   primary: '#162456',    // Material Blue
   secondary: '#193cb8',  // Darker Blue
   accent: '#64B5F6',     // Light Blue
-  background: '#1f314bff',  // Keeping dark background
+  background: '#19283fff',  // Keeping dark background
   backgroundAlt: '#162133',  // Keeping dark background
   text: '#e3e3e3',       // Keeping light text
   grey: '#90CAF9',       // Light Blue Grey

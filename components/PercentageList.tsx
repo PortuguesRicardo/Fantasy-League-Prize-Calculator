@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 4,
   },
   removeBtn: {
-    backgroundColor: '#b81919',
+    backgroundColor: '#9a031e',
     paddingHorizontal: 10,
     paddingVertical: 8,
     borderRadius: 8,

@@ -8,6 +8,8 @@ import PercentageList from '../components/PercentageList';
 import Button from '../components/Button';
 import { PrizeConfig, PrizeDistribution } from '../types/prize';
 import usePrizeCalculator from '../hooks/usePrizeCalculator';
+import { Image } from "react-native";
+
 
 export default function MainScreen() {
   // Defaults from your example
@@ -71,7 +73,11 @@ export default function MainScreen() {
           <Text style={commonStyles.text}>
             Enter your league&apos;s details and distribution to calculate the prize pool and payouts.
           </Text>
-
+          <Image
+            source={{ uri: '/icon-192.png' }}   // file lives in /public
+            style={styles.heroIcon}
+            resizeMode="contain"
+          />
           <View style={commonStyles.section}>
             <View style={commonStyles.card}>
               <Text style={styles.sectionTitle}>League Setup</Text>
@@ -169,6 +175,7 @@ export default function MainScreen() {
   );
 }
 
+
 const styles = StyleSheet.create({
   // centers children inside the ScrollView on wide screens
   centerContent: {
@@ -182,6 +189,7 @@ const styles = StyleSheet.create({
     width: '100%',
     maxWidth: 980, // tweak: 840 / 960 / 1120 etc.
     alignSelf: 'center',
+    marginTop: 20,
   },
   sectionTitle: {
     color: colors.text,
@@ -223,5 +231,13 @@ const styles = StyleSheet.create({
   summaryValue: {
     color: '#E0FFE9',
     fontWeight: '800',
+  },
+  heroIcon: {
+    width: 96,
+    height: 96,
+    alignSelf: 'center',
+    marginTop: 12,
+    marginBottom: 20,
+    borderRadius: 16,
   },
 });
