@@ -1,11 +1,13 @@
-import { Text, TouchableOpacity, StyleSheet, ViewStyle, TextStyle } from 'react-native';
+import { Text, TouchableOpacity, StyleSheet, ViewStyle, TextStyle, StyleProp } from 'react-native';
 import { colors } from '../styles/commonStyles';
 
 interface ButtonProps {
   text: string;
   onPress: () => void;
-  style?: ViewStyle | ViewStyle[];
-  textStyle?: TextStyle;
+  // style?: ViewStyle | ViewStyle[];
+  // textStyle?: TextStyle;
+  style?: StyleProp<ViewStyle>;   // allows array, object, or undefined
+  textStyle?: StyleProp<TextStyle>;
 }
 
 export default function Button({ text, onPress, style, textStyle }: ButtonProps) {
